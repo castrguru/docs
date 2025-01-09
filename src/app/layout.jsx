@@ -4,6 +4,7 @@ import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 
 import '@/styles/tailwind.css'
+import PlausibleProvider from 'next-plausible'
 
 export const metadata = {
   title: {
@@ -25,11 +26,16 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       <body className="flex min-h-full bg-white antialiased dark:bg-zinc-900">
-        <Providers>
-          <div className="w-full">
-            <Layout allSections={allSections}>{children}</Layout>
-          </div>
-        </Providers>
+        <PlausibleProvider
+          domain="docs.castr.guru"
+          customDomain="https://plausible.castr.guru"
+        >
+          <Providers>
+            <div className="w-full">
+              <Layout allSections={allSections}>{children}</Layout>
+            </div>
+          </Providers>
+        </PlausibleProvider>
       </body>
     </html>
   )
