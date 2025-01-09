@@ -1,0 +1,26 @@
+services:
+  webapp:
+    build: .
+    image: castrguru-docs
+    container_name: castrguru-docs
+    restart: unless-stopped
+    # network_mode: 'host'
+    ports:
+      - '127.0.0.1:9000:3000'
+    #   - '0.0.0.0:80:3000'     # use without proxy server
+    logging: # apply better controls to Docker overlay folder
+      driver: 'json-file'
+      options:
+        max-file: '5'
+        max-size: '10m'
+    # env_file: .env
+    # environment:
+    #   - PROJECT_ID=${PROJECT_ID} # change to match your own environment
+    #   - PROJECT_NAME=${PROJECT_NAME} # change to match your own environment
+    #   - PROJECT_MNEMONIC=${PROJECT_MNEMONIC} # change to match your own environment
+# volumes:
+#   castrguru-docs:
+# Networks
+# networks:
+#   castrguru-docs-network:
+#     driver: bridge
