@@ -10,8 +10,71 @@ export const sections = [
   { title: 'Official libraries', id: 'official-libraries' },
 ]
 
+
 # Castr GÜRŲ SDKs
 
 The recommended way to interact with the Castr GÜRŲ API is by using one of our official SDKs. Today, Castr GÜRŲ offers fine-tuned JavaScript, Ruby, PHP, Python, and Go libraries to make your life easier and give you the best experience when consuming the API. {{ className: 'lead' }}
 
 <Libraries />
+
+
+## Astro Collections
+
+Utilize Astro Content Loaders for managing information about your Farcaster frames.
+
+```ts {{ title: 'Setup for ALL available Content Loaders' }}
+// src/content.config.ts
+import { defineCollection } from 'astro:content'
+import {
+  eventsLoader,
+  messagesLoader,
+  profilesLoader,
+  sessionsLoader,
+} from '@castrguru/astro'
+
+// Setup events
+const events = defineCollection({
+  loader: eventsLoader({ since: 0 }), // default = new events
+  schema: /* TODO */,
+})
+
+// Setup messages
+const messages = defineCollection({
+  loader: messagesLoader({ fid: '<enter-your-farcaster-id>', since: 0 }), // default = new messages
+  schema: /* TODO */,
+})
+
+// Setup profiles
+const profiles = defineCollection({
+  loader: profilesLoader(),
+  schema: /* TODO */,
+})
+
+// Setup sessions
+const sessions = defineCollection({
+  loader: sessionsLoader({ status: 'active' }),
+  schema: /* TODO */,
+})
+
+// Export all collections
+export const collections = {
+  events,
+  messages,
+  profiles,
+  sessions,
+}
+```
+
+Please don't commit your Castr GÜRŲ password to GitHub!
+
+
+## React Hooks
+```ts {{ title: 'Setup for ALL available React Hooks' }}
+// TODO
+```
+
+
+## Vue.js Plug-ins
+```ts {{ title: 'Setup for ALL available Vue.js plug-ins' }}
+// TODO
+```
