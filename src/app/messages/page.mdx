@@ -70,7 +70,7 @@ The message model contains all the information about the messages and attachment
     <CodeGroup title="Request" tag="GET" label="/v1/messages">
 
     ```bash {{ title: 'cURL' }}
-    curl -G https://api.protocol.chat/v1/messages \
+    curl -G https://castr.guru/v1/messages \
       -H "Authorization: Bearer {token}" \
       -d conversation_id=xgQQXg3hrtjh7AvZ \
       -d limit=10
@@ -111,7 +111,7 @@ The message model contains all the information about the messages and attachment
             "id": "WAz8eIbvDR60rouK",
             "username": "KevinMcCallister",
             "phone_number": "1-800-759-3000",
-            "avatar_url": "https://assets.protocol.chat/avatars/buzzboy.jpg",
+            "avatar_url": "https://assets.castr.guru/avatars/buzzboy.jpg",
             "last_active_at": 705103200,
             "created_at": 692233200
           },
@@ -167,7 +167,7 @@ The message model contains all the information about the messages and attachment
     <CodeGroup title="Request" tag="POST" label="/v1/messages">
 
     ```bash {{ title: 'cURL' }}
-    curl https://api.protocol.chat/v1/messages \
+    curl https://castr.guru/v1/messages \
       -H "Authorization: Bearer {token}" \
       -d conversation_id="xgQQXg3hrtjh7AvZ" \
       -d message="You’re what the French call ‘les incompetents.’"
@@ -214,7 +214,7 @@ The message model contains all the information about the messages and attachment
         "id": "inEIRvzjC6YLMX3o",
         "username": "LinnieMcCallister",
         "phone_number": "1-800-759-3000",
-        "avatar_url": "https://assets.protocol.chat/avatars/linnie.jpg",
+        "avatar_url": "https://assets.castr.guru/avatars/linnie.jpg",
         "last_active_at": 705103200,
         "created_at": 692233200
       },
@@ -245,7 +245,7 @@ The message model contains all the information about the messages and attachment
     <CodeGroup title="Request" tag="GET" label="/v1/messages/SIuAFUNKdSYHZF2w">
 
     ```bash {{ title: 'cURL' }}
-    curl https://api.protocol.chat/v1/messages/SIuAFUNKdSYHZF2w \
+    curl https://castr.guru/v1/messages/SIuAFUNKdSYHZF2w \
       -H "Authorization: Bearer {token}"
     ```
 
@@ -281,7 +281,7 @@ The message model contains all the information about the messages and attachment
         "id": "WAz8eIbvDR60rouK",
         "username": "KevinMcCallister",
         "phone_number": "1-800-759-3000",
-        "avatar_url": "https://assets.protocol.chat/avatars/kevin.jpg",
+        "avatar_url": "https://assets.castr.guru/avatars/kevin.jpg",
         "last_active_at": 705103200,
         "created_at": 692233200
       },
@@ -326,7 +326,7 @@ The message model contains all the information about the messages and attachment
     <CodeGroup title="Request" tag="PUT" label="/v1/messages/SIuAFUNKdSYHZF2w">
 
     ```bash {{ title: 'cURL' }}
-    curl -X PUT https://api.protocol.chat/v1/messages/SIuAFUNKdSYHZF2w \
+    curl -X PUT https://castr.guru/v1/messages/SIuAFUNKdSYHZF2w \
       -H "Authorization: Bearer {token}" \
       -d reactions[red_angry_face][]="KateMcCallister"
     ```
@@ -372,7 +372,7 @@ The message model contains all the information about the messages and attachment
         "id": "WAz8eIbvDR60rouK",
         "username": "KevinMcCallister",
         "phone_number": "1-800-759-3000",
-        "avatar_url": "https://assets.protocol.chat/avatars/buzzboy.jpg",
+        "avatar_url": "https://assets.castr.guru/avatars/buzzboy.jpg",
         "last_active_at": 705103200,
         "created_at": 692233200
       },
@@ -409,7 +409,7 @@ The message model contains all the information about the messages and attachment
     <CodeGroup title="Request" tag="DELETE" label="/v1/messages/SIuAFUNKdSYHZF2w">
 
     ```bash {{ title: 'cURL' }}
-    curl -X DELETE https://api.protocol.chat/v1/messages/SIuAFUNKdSYHZF2w \
+    curl -X DELETE https://castr.guru/v1/messages/SIuAFUNKdSYHZF2w \
       -H "Authorization: Bearer {token}"
     ```
 

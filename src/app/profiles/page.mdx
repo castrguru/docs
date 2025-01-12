@@ -65,7 +65,7 @@ The profile model contains all the information about your profiles, such as thei
     <CodeGroup title="Request" tag="GET" label="/v1/profiles">
 
     ```bash {{ title: 'cURL' }}
-    curl -G https://api.protocol.chat/v1/profiles \
+    curl -G https://castr.guru/v1/profiles \
       -H "Authorization: Bearer {token}" \
       -d active=true \
       -d limit=10
@@ -103,7 +103,7 @@ The profile model contains all the information about your profiles, such as thei
           "id": "WAz8eIbvDR60rouK",
           "username": "FrankMcCallister",
           "phone_number": "1-800-759-3000",
-          "avatar_url": "https://assets.protocol.chat/avatars/frank.jpg",
+          "avatar_url": "https://assets.castr.guru/avatars/frank.jpg",
           "display_name": null,
           "conversation_id": "xgQQXg3hrtjh7AvZ",
           "last_active_at": 705103200,
@@ -157,11 +157,11 @@ The profile model contains all the information about your profiles, such as thei
     <CodeGroup title="Request" tag="POST" label="/v1/profiles">
 
     ```bash {{ title: 'cURL' }}
-    curl https://api.protocol.chat/v1/profiles \
+    curl https://castr.guru/v1/profiles \
       -H "Authorization: Bearer {token}" \
       -d username="FrankMcCallister" \
       -d phone_number="1-800-759-3000" \
-      -d avatar_url="https://assets.protocol.chat/avatars/frank.jpg"
+      -d avatar_url="https://assets.castr.guru/avatars/frank.jpg"
     ```
 
     ```js
@@ -172,7 +172,7 @@ The profile model contains all the information about your profiles, such as thei
     await client.profiles.create({
       username: 'FrankMcCallister',
       phone_number: '1-800-759-3000',
-      avatar_url: 'https://assets.protocol.chat/avatars/frank.jpg',
+      avatar_url: 'https://assets.castr.guru/avatars/frank.jpg',
     })
     ```
 
@@ -184,7 +184,7 @@ The profile model contains all the information about your profiles, such as thei
     client.profiles.create(
       username="FrankMcCallister",
       phone_number="1-800-759-3000",
-      avatar_url="https://assets.protocol.chat/avatars/frank.jpg",
+      avatar_url="https://assets.castr.guru/avatars/frank.jpg",
     )
     ```
 
@@ -194,7 +194,7 @@ The profile model contains all the information about your profiles, such as thei
     $client->profiles->create([
       'username' => 'FrankMcCallister',
       'phone_number' => '1-800-759-3000',
-      'avatar_url' => 'https://assets.protocol.chat/avatars/frank.jpg',
+      'avatar_url' => 'https://assets.castr.guru/avatars/frank.jpg',
     ]);
     ```
 
@@ -205,7 +205,7 @@ The profile model contains all the information about your profiles, such as thei
       "id": "WAz8eIbvDR60rouK",
       "username": "FrankMcCallister",
       "phone_number": "1-800-759-3000",
-      "avatar_url": "https://assets.protocol.chat/avatars/frank.jpg",
+      "avatar_url": "https://assets.castr.guru/avatars/frank.jpg",
       "display_name": null,
       "conversation_id": "xgQQXg3hrtjh7AvZ",
       "last_active_at": null,
@@ -231,7 +231,7 @@ The profile model contains all the information about your profiles, such as thei
     <CodeGroup title="Request" tag="GET" label="/v1/profiles/WAz8eIbvDR60rouK">
 
     ```bash {{ title: 'cURL' }}
-    curl https://api.protocol.chat/v1/profiles/WAz8eIbvDR60rouK \
+    curl https://castr.guru/v1/profiles/WAz8eIbvDR60rouK \
       -H "Authorization: Bearer {token}"
     ```
 
@@ -264,7 +264,7 @@ The profile model contains all the information about your profiles, such as thei
       "id": "WAz8eIbvDR60rouK",
       "username": "FrankMcCallister",
       "phone_number": "1-800-759-3000",
-      "avatar_url": "https://assets.protocol.chat/avatars/frank.jpg",
+      "avatar_url": "https://assets.castr.guru/avatars/frank.jpg",
       "display_name": null,
       "conversation_id": "xgQQXg3hrtjh7AvZ",
       "last_active_at": 705103200,
@@ -298,7 +298,7 @@ The profile model contains all the information about your profiles, such as thei
     <CodeGroup title="Request" tag="PUT" label="/v1/profiles/WAz8eIbvDR60rouK">
 
     ```bash {{ title: 'cURL' }}
-    curl -X PUT https://api.protocol.chat/v1/profiles/WAz8eIbvDR60rouK \
+    curl -X PUT https://castr.guru/v1/profiles/WAz8eIbvDR60rouK \
       -H "Authorization: Bearer {token}" \
       -d display_name="UncleFrank"
     ```
@@ -336,7 +336,7 @@ The profile model contains all the information about your profiles, such as thei
       "id": "WAz8eIbvDR60rouK",
       "username": "FrankMcCallister",
       "phone_number": "1-800-759-3000",
-      "avatar_url": "https://assets.protocol.chat/avatars/frank.jpg",
+      "avatar_url": "https://assets.castr.guru/avatars/frank.jpg",
       "display_name": "UncleFrank",
       "conversation_id": "xgQQXg3hrtjh7AvZ",
       "last_active_at": 705103200,
@@ -362,7 +362,7 @@ The profile model contains all the information about your profiles, such as thei
     <CodeGroup title="Request" tag="DELETE" label="/v1/profiles/WAz8eIbvDR60rouK">
 
     ```bash {{ title: 'cURL' }}
-    curl -X DELETE https://api.protocol.chat/v1/profiles/WAz8eIbvDR60rouK \
+    curl -X DELETE https://castr.guru/v1/profiles/WAz8eIbvDR60rouK \
       -H "Authorization: Bearer {token}"
     ```
 

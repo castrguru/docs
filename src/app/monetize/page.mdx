@@ -1,7 +1,7 @@
 export const metadata = {
     title: 'Monetize',
     description:
-        'In this guide, we will talk about what happens when something goes wrong while you work with the API.',
+        'In this guide, we will review different ways to monetize your frames, using the Castr GÜRŲ API.',
 }
 
 # Monetize
@@ -11,60 +11,54 @@ In this guide, we will talk about what happens when something goes wrong while y
 You can tell if your request was successful by checking the status code when receiving an API response. If a response comes back unsuccessful, you can use the error type and error message to figure out what has gone wrong and do some rudimentary debugging (before contacting support).
 
 <Note>
-  Before reaching out to support with an error, please be aware that 99% of all
-  reported errors are, in fact, user errors. Therefore, please carefully check
-  your code before contacting Castr GÜRŲ support.
+    Before reaching out to support with an error, please be aware that 99% of all reported errors are, in fact, user errors.
+    Therefore, please carefully check your code before contacting Castr GÜRŲ support.
 </Note>
 
 ---
 
-## Status codes
+## Banner Sizes
 
-Here is a list of the different categories of status codes returned by the Castr GÜRŲ API. Use these to understand if a request was successful.
+Here is a list of the different categories of status codes returned by the Castr GÜRŲ API.
+Use these to understand if a request was successful.
 
 <Properties>
-  <Property name="2xx">
-    A 2xx status code indicates a successful response.
-  </Property>
-  <Property name="4xx">
-    A 4xx status code indicates a client error — this means it's a _you_
-    problem.
-  </Property>
-  <Property name="5xx">
-    A 5xx status code indicates a server error — you won't be seeing these.
-  </Property>
+    <Property name="320x50">
+        A 320x50 banner size is standard for small handheld devices.
+    </Property>
+
+    <Property name="468x60">
+        A 468x60 banner size is standard for large tablet &amp; desktop devices.
+    </Property>
 </Properties>
 
 ---
 
-## Error types
+## Banner Requests
 
 <Row>
-  <Col>
+    <Col>
+        Whenever a request is unsuccessful, the Castr GÜRŲ API will return an error response with an error type and message. You can use this information to understand better what has gone wrong and how to fix it. Most of the error messages are pretty helpful and actionable.
+        Here is a list of the two error types supported by the Castr GÜRŲ API — use these to understand what you have done wrong.
 
-    Whenever a request is unsuccessful, the Castr GÜRŲ API will return an error response with an error type and message. You can use this information to understand better what has gone wrong and how to fix it. Most of the error messages are pretty helpful and actionable.
+        <Properties>
+            <Property name="api_error">
+                This means that we made an error, which is highly speculative and unlikely.
+            </Property>
 
-    Here is a list of the two error types supported by the Castr GÜRŲ API — use these to understand what you have done wrong.
+            <Property name="invalid_request">
+                This means that you made an error, which is much more likely.
+            </Property>
+        </Properties>
+    </Col>
 
-    <Properties>
-      <Property name="api_error">
-        This means that we made an error, which is highly speculative and unlikely.
-      </Property>
-      <Property name="invalid_request">
-        This means that you made an error, which is much more likely.
-      </Property>
-    </Properties>
-
-  </Col>
-  <Col>
-
-    ```bash {{ title: "Error response" }}
-    {
-      "type": "api_error",
-      "message": "No way this is happening!?",
-      "documentation_url": "https://protocol.chat/docs/errors/api_error"
-    }
-    ```
-
-  </Col>
+    <Col>
+        ```bash {{ title: "API Response" }}
+        {
+            "type": "api_error",
+            "message": "No way this is happening!?",
+            "documentation_url": "https://castr.guru/docs/errors/api_error"
+        }
+        ```
+    </Col>
 </Row>
