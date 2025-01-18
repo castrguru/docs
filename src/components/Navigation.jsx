@@ -198,7 +198,7 @@ export const navigation = [
             { title: 'Introduction', href: '/' },
             { title: 'Quickstart', href: '/quickstart' },
             { title: 'Libraries', href: '/libs' },
-            // { title: 'Authentication', href: '/authentication' },
+            // { title: 'Authentication', href: '/auth' },
             // { title: 'Pagination', href: '/pagination' },
             { title: 'Monetize', href: '/monetize' },
             // { title: 'Webhooks', href: '/webhooks' },
@@ -209,7 +209,7 @@ export const navigation = [
         links: [
             { title: 'Profiles', href: '/profiles' },
             // { title: 'Conversations', href: '/conversations' },
-            { title: 'Messages', href: '/messages' },
+            { title: 'Notifications', href: '/notifs' },
             // { title: 'Groups', href: '/groups' },
             // { title: 'Attachments', href: '/attachments' },
         ],
