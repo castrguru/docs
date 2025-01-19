@@ -198,7 +198,7 @@ export const navigation = [
             { title: 'Introduction', href: '/' },
             { title: 'Quick Start', href: '/quick' },
             { title: 'User Management', href: '/users' },
-            { title: 'Communications', href: '/comms' },
+            { title: 'Engagements', href: '/engage' },
             { title: 'Data Analytics', href: '/analytics' },
             { title: 'Health Inspector', href: '/inspect' },
             { title: 'Monetization', href: '/monetize' },
