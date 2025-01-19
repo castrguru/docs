@@ -19,7 +19,7 @@ You'll find it under [Settings &raquo; API](#).
 </Note>
 
 
-## Choose Your Client
+## Choosing a (Tech) Stack
 
 Before making your first API request, you need to pick which API client you will use.
 In addition to good ol' cURL HTTP requests, Castr GÜRŲ offers clients for JavaScript, Python, and Rust.
@@ -56,7 +56,7 @@ cargo install castrguru
 </div>
 
 
-## Making Your 1st API Request
+## Making a REST Request
 
 After picking your preferred client, you are ready to make your first call to the Castr GÜRŲ Cloud.
 Below, you can see how to send a GET request to the Profile endpoint to get a list of all your users.
@@ -73,9 +73,9 @@ curl -G https://castr.guru/v1/profiles \
 ```js {{ language: 'js', title: 'JavaScript/TypeScript' }}
 import { Frame } from 'castrguru'
 
-const frame = await Frame(token).init()
+const frame = await Frame(process.env.APP_FRAME_ID).init()
 
-await frame.profiles.list()
+await frame.ready()
 ```
 
 ```python
@@ -94,7 +94,14 @@ $client->profiles->list();
 
 </CodeGroup>
 
-## GraphQL
+
+## Making a GraphQL Query
+
+<Note>
+
+IT IS HIGHLY RECOMMENDED TO USE GRAPHQL VS REST FOR PERFORMANCE REASONS
+
+</Note>
 
 As an alternative to the traditional REST services, we highly recommend our efficient GraphQL server for your data needs.
 
@@ -113,6 +120,46 @@ As an alternative to the traditional REST services, we highly recommend our effi
         <>Read the docs for the Conversations endpoint</>
     </Button>
 </div>
+
+
+## Making a Backend Integration
+
+After picking your preferred client, you are ready to make your first call to the Castr GÜRŲ Cloud.
+Below, you can see how to send a GET request to the Profile endpoint to get a list of all your users.
+In the cURL example, results are limited to ten users, the default page length for each client.
+
+<CodeGroup tag="GET" label="/v1/profiles">
+
+```bash {{ title: 'cURL' }}
+curl -G https://castr.guru/v1/profiles \
+  -H "Authorization: Bearer {token}" \
+  -d limit=10
+```
+
+```js {{ language: 'js', title: 'JavaScript/TypeScript' }}
+import { Frame } from 'castrguru'
+
+const frame = await Frame(process.env.APP_FRAME_ID).init()
+
+await frame.ready()
+```
+
+```python
+from protocol_api import ApiClient
+
+client = ApiClient(token)
+
+client.profiles.list()
+```
+
+```rust {{ title: 'Rust' }}
+$client = new \Protocol\ApiClient($token);
+
+$client->profiles->list();
+```
+
+</CodeGroup>
+
 
 ## What's next?
 
