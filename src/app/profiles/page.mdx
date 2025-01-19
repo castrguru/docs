@@ -67,34 +67,36 @@ The profile model contains all the information about your profiles, such as thei
 
 	<Col sticky>
     	<CodeGroup title="Request" tag="GET" label="/v1/profiles">
-		    ```bash {{ title: 'cURL' }}
-    		curl -G https://castr.guru/v1/profiles \
-      		  -H "Authorization: Bearer {token}" \
-      		  -d active=true \
-      		  -d limit=10
-    		```
 
-    		```js
-    		import ApiClient from '@example/protocol-api'
+		```bash {{ title: 'cURL' }}
+		curl -G https://castr.guru/v1/profiles \
+			-H "Authorization: Bearer {token}" \
+			-d active=true \
+			-d limit=10
+		```
 
-    		const client = new ApiClient(token)
+		```js
+		import ApiClient from '@example/protocol-api'
 
-    		await client.profiles.list()
-    		```
+		const client = new ApiClient(token)
 
-    		```python
-    		from protocol_api import ApiClient
+		await client.profiles.list()
+		```
 
-    		client = ApiClient(token)
+		```python
+		from protocol_api import ApiClient
 
-			client.profiles.list()
-    		```
+		client = ApiClient(token)
 
-    		```php
-    		$client = new \Protocol\ApiClient($token);
+		client.profiles.list()
+		```
 
-			$client->profiles->list();
-    		```
+		```php
+		$client = new \Protocol\ApiClient($token);
+
+		$client->profiles->list();
+		```
+
 		</CodeGroup>
 
     	```json {{ title: 'Response' }}
@@ -156,48 +158,50 @@ The profile model contains all the information about your profiles, such as thei
 
   	<Col sticky>
     	<CodeGroup title="Request" tag="POST" label="/v1/profiles">
-			```bash {{ title: 'cURL' }}
-			curl https://castr.guru/v1/profiles \
-			  -H "Authorization: Bearer {token}" \
-			  -d username="FrankMcCallister" \
-			  -d phone_number="1-800-759-3000" \
-			  -d avatar_url="https://assets.castr.guru/avatars/frank.jpg"
-			```
 
-			```js
-			import ApiClient from '@example/protocol-api'
+		```bash {{ title: 'cURL' }}
+		curl https://castr.guru/v1/profiles \
+			-H "Authorization: Bearer {token}" \
+			-d username="FrankMcCallister" \
+			-d phone_number="1-800-759-3000" \
+			-d avatar_url="https://assets.castr.guru/avatars/frank.jpg"
+		```
 
-			const client = new ApiClient(token)
+		```js
+		import ApiClient from '@example/protocol-api'
 
-			await client.profiles.create({
-			  username: 'FrankMcCallister',
-			  phone_number: '1-800-759-3000',
-			  avatar_url: 'https://assets.castr.guru/avatars/frank.jpg',
-			})
-			```
+		const client = new ApiClient(token)
 
-			```python
-			from protocol_api import ApiClient
+		await client.profiles.create({
+			username: 'FrankMcCallister',
+			phone_number: '1-800-759-3000',
+			avatar_url: 'https://assets.castr.guru/avatars/frank.jpg',
+		})
+		```
 
-			client = ApiClient(token)
+		```python
+		from protocol_api import ApiClient
 
-			client.profiles.create(
-			  username="FrankMcCallister",
-			  phone_number="1-800-759-3000",
-			  avatar_url="https://assets.castr.guru/avatars/frank.jpg",
-			)
-			```
+		client = ApiClient(token)
 
-			```php
-			$client = new \Protocol\ApiClient($token);
+		client.profiles.create(
+			username="FrankMcCallister",
+			phone_number="1-800-759-3000",
+			avatar_url="https://assets.castr.guru/avatars/frank.jpg",
+		)
+		```
 
-			$client->profiles->create([
-			  'username' => 'FrankMcCallister',
-			  'phone_number' => '1-800-759-3000',
-			  'avatar_url' => 'https://assets.castr.guru/avatars/frank.jpg',
-			]);
-			```
-   		</CodeGroup>
+		```php
+		$client = new \Protocol\ApiClient($token);
+
+		$client->profiles->create([
+			'username' => 'FrankMcCallister',
+			'phone_number' => '1-800-759-3000',
+			'avatar_url' => 'https://assets.castr.guru/avatars/frank.jpg',
+		]);
+		```
+
+		</CodeGroup>
 
 		```json {{ title: 'Response' }}
 		{
@@ -225,32 +229,34 @@ The profile model contains all the information about your profiles, such as thei
 
   	<Col sticky>
     	<CodeGroup title="Request" tag="GET" label="/v1/profiles/WAz8eIbvDR60rouK">
-			```bash {{ title: 'cURL' }}
-			curl https://castr.guru/v1/profiles/WAz8eIbvDR60rouK \
-			  -H "Authorization: Bearer {token}"
-			```
 
-			```js
-			import ApiClient from '@example/protocol-api'
+		```bash {{ title: 'cURL' }}
+		curl https://castr.guru/v1/profiles/WAz8eIbvDR60rouK \
+			-H "Authorization: Bearer {token}"
+		```
 
-			const client = new ApiClient(token)
+		```js
+		import ApiClient from '@example/protocol-api'
 
-			await client.profiles.get('WAz8eIbvDR60rouK')
-			```
+		const client = new ApiClient(token)
 
-			```python
-			from protocol_api import ApiClient
+		await client.profiles.get('WAz8eIbvDR60rouK')
+		```
 
-			client = ApiClient(token)
+		```python
+		from protocol_api import ApiClient
 
-			client.profiles.get("WAz8eIbvDR60rouK")
-			```
+		client = ApiClient(token)
 
-			```php
-			$client = new \Protocol\ApiClient($token);
+		client.profiles.get("WAz8eIbvDR60rouK")
+		```
 
-			$client->profiles->get('WAz8eIbvDR60rouK');
-			```
+		```php
+		$client = new \Protocol\ApiClient($token);
+
+		$client->profiles->get('WAz8eIbvDR60rouK');
+		```
+
     	</CodeGroup>
 
 		```json {{ title: 'Response' }}
@@ -287,37 +293,39 @@ The profile model contains all the information about your profiles, such as thei
 
   	<Col sticky>
     	<CodeGroup title="Request" tag="PUT" label="/v1/profiles/WAz8eIbvDR60rouK">
-			```bash {{ title: 'cURL' }}
-			curl -X PUT https://castr.guru/v1/profiles/WAz8eIbvDR60rouK \
-			  -H "Authorization: Bearer {token}" \
-			  -d display_name="UncleFrank"
-			```
 
-			```js
-			import ApiClient from '@example/protocol-api'
+		```bash {{ title: 'cURL' }}
+		curl -X PUT https://castr.guru/v1/profiles/WAz8eIbvDR60rouK \
+			-H "Authorization: Bearer {token}" \
+			-d display_name="UncleFrank"
+		```
 
-			const client = new ApiClient(token)
+		```js
+		import ApiClient from '@example/protocol-api'
 
-			await client.profiles.update('WAz8eIbvDR60rouK', {
-			  display_name: 'UncleFrank',
-			})
-			```
+		const client = new ApiClient(token)
 
-			```python
-			from protocol_api import ApiClient
+		await client.profiles.update('WAz8eIbvDR60rouK', {
+			display_name: 'UncleFrank',
+		})
+		```
 
-			client = ApiClient(token)
+		```python
+		from protocol_api import ApiClient
 
-			client.profiles.update("WAz8eIbvDR60rouK", display_name="UncleFrank")
-			```
+		client = ApiClient(token)
 
-			```php
-			$client = new \Protocol\ApiClient($token);
+		client.profiles.update("WAz8eIbvDR60rouK", display_name="UncleFrank")
+		```
 
-			$client->profiles->update('WAz8eIbvDR60rouK', [
-			  'display_name' => 'UncleFrank',
-			]);
-			```
+		```php
+		$client = new \Protocol\ApiClient($token);
+
+		$client->profiles->update('WAz8eIbvDR60rouK', [
+			'display_name' => 'UncleFrank',
+		]);
+		```
+
     	</CodeGroup>
 
 		```json {{ title: 'Response' }}
@@ -346,32 +354,34 @@ The profile model contains all the information about your profiles, such as thei
 
   	<Col sticky>
     	<CodeGroup title="Request" tag="DELETE" label="/v1/profiles/WAz8eIbvDR60rouK">
-			```bash {{ title: 'cURL' }}
-			curl -X DELETE https://castr.guru/v1/profiles/WAz8eIbvDR60rouK \
-			  -H "Authorization: Bearer {token}"
-			```
 
-			```js
-			import ApiClient from '@example/protocol-api'
+		```bash {{ title: 'cURL' }}
+		curl -X DELETE https://castr.guru/v1/profiles/WAz8eIbvDR60rouK \
+			-H "Authorization: Bearer {token}"
+		```
 
-			const client = new ApiClient(token)
+		```js
+		import ApiClient from '@example/protocol-api'
 
-			await client.profiles.delete('WAz8eIbvDR60rouK')
-			```
+		const client = new ApiClient(token)
 
-			```python
-			from protocol_api import ApiClient
+		await client.profiles.delete('WAz8eIbvDR60rouK')
+		```
 
-			client = ApiClient(token)
+		```python
+		from protocol_api import ApiClient
 
-			client.profiles.delete("WAz8eIbvDR60rouK")
-			```
+		client = ApiClient(token)
 
-			```php
-			$client = new \Protocol\ApiClient($token);
+		client.profiles.delete("WAz8eIbvDR60rouK")
+		```
 
-			$client->profiles->delete('WAz8eIbvDR60rouK');
-			```
+		```php
+		$client = new \Protocol\ApiClient($token);
+
+		$client->profiles->delete('WAz8eIbvDR60rouK');
+		```
+
     	</CodeGroup>
   	</Col>
 </Row>

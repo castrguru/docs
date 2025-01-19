@@ -207,7 +207,7 @@ export const navigation = [
         links: [
             { title: 'Introduction', href: '/api' },
             { title: 'Authentication', href: '/auth' },
-            { title: 'Profile', href: '/profile' },
+            { title: 'Profiles', href: '/profiles' },
             { title: 'Notification', href: '/notify' },
             { title: 'Webhook', href: '/webhook' },
         ],
