@@ -193,19 +193,19 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
     {
-        title: 'User Guides',
+        title: 'USER GUIDES',
         links: [
             { title: 'Introduction', href: '/' },
             { title: 'Quick Start', href: '/quick' },
             { title: 'User Management', href: '/users' },
-            { title: 'Engagements', href: '/engage' },
+            { title: 'Engagement', href: '/engage' },
             { title: 'Data Analytics', href: '/analytics' },
             { title: 'Health Inspector', href: '/inspect' },
             { title: 'Monetization', href: '/monetize' },
         ],
     },
     {
-        title: 'For Builders',
+        title: 'FOR BUILDERS',
         links: [
             { title: 'Introduction', href: '/builders' },
             { title: 'Astro', href: '/astro' },
@@ -216,7 +216,7 @@ export const navigation = [
         ],
     },
     {
-        title: 'For Gamers',
+        title: 'FOR GAMERS',
         links: [
             { title: 'Introduction', href: '/gamers' },
             { title: 'Godot', href: '/godot' },
@@ -225,7 +225,7 @@ export const navigation = [
         ],
     },
     {
-        title: 'API v1 Guide',
+        title: 'API V1 GUIDE',
         links: [
             { title: 'Introduction', href: '/api' },
             { title: 'Auth', href: '/auth' },
