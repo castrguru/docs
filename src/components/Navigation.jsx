@@ -193,7 +193,7 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
     {
-        title: 'User Guides',
+        title: 'For Builders',
         links: [
             { title: 'Introduction', href: '/' },
             { title: 'Quick Start', href: '/quick' },
@@ -204,20 +204,18 @@ export const navigation = [
         ],
     },
     {
-        title: 'Framework Guides',
+        title: 'Frameworks',
         links: [
             { title: 'Introduction', href: '/frameworks' },
             { title: 'Astro', href: '/astro' },
-            { title: 'Gatsby', href: '/gatsby' },
             { title: 'Next.js', href: '/next' },
-            { title: 'Nuxt.js', href: '/nuxt' },
+            { title: 'Nuxt', href: '/nuxt' },
             { title: 'React', href: '/react' },
-            { title: 'React Native', href: '/react-native' },
             { title: 'Vue.js', href: '/vue' },
         ],
     },
     {
-        title: 'API v1',
+        title: 'API v1 Guide',
         links: [
             { title: 'Introduction', href: '/api' },
             { title: 'Auth', href: '/auth' },
