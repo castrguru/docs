@@ -193,14 +193,15 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
     {
-        title: 'For Builders',
+        title: 'User Guides',
         links: [
             { title: 'Introduction', href: '/' },
             { title: 'Quick Start', href: '/quick' },
             { title: 'User Management', href: '/users' },
+            { title: 'Communications', href: '/comms' },
+            { title: 'Data Analytics', href: '/analytics' },
+            { title: 'Health Inspector', href: '/inspect' },
             { title: 'Monetization', href: '/monetize' },
-            { title: 'Notifications', href: '/notifs' },
-            { title: 'Analytics', href: '/analytics' },
         ],
     },
     {
