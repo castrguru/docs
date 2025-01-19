@@ -205,15 +205,23 @@ export const navigation = [
         ],
     },
     {
-        title: 'Frameworks',
+        title: 'For Builders',
         links: [
-            { title: 'Introduction', href: '/frameworks' },
+            { title: 'Introduction', href: '/builders' },
             { title: 'Astro', href: '/astro' },
-            { title: 'Godot', href: '/godot' },
             { title: 'Next.js', href: '/next' },
             { title: 'Nuxt', href: '/nuxt' },
             { title: 'React', href: '/react' },
             { title: 'Vue.js', href: '/vue' },
+        ],
+    },
+    {
+        title: 'For Gamers',
+        links: [
+            { title: 'Introduction', href: '/gamers' },
+            { title: 'Godot', href: '/godot' },
+            { title: 'Unity', href: '/unity' },
+            { title: 'Unreal Engine', href: '/unreal' },
         ],
     },
     {
