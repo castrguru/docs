@@ -196,10 +196,24 @@ export const navigation = [
         title: 'User Guides',
         links: [
             { title: 'Introduction', href: '/' },
-            { title: 'Quickstart', href: '/quickstart' },
-            { title: 'Astro Integration', href: '/astro' },
-            { title: 'Next.js Integration', href: '/next' },
-            { title: 'Monetize', href: '/monetize' },
+            { title: 'Quick Start', href: '/quick' },
+            { title: 'User Management', href: '/users' },
+            { title: 'Monetization', href: '/monetize' },
+            { title: 'Notifications', href: '/notifs' },
+            { title: 'Analytics', href: '/analytics' },
+        ],
+    },
+    {
+        title: 'Framework Guides',
+        links: [
+            { title: 'Introduction', href: '/frameworks' },
+            { title: 'Astro', href: '/astro' },
+            { title: 'Gatsby', href: '/' },
+            { title: 'Next.js', href: '/next' },
+            { title: 'Nuxt.js', href: '/' },
+            { title: 'React', href: '/' },
+            { title: 'React Native', href: '/' },
+            { title: 'Vue.js', href: '/' },
         ],
     },
     {
@@ -208,8 +222,7 @@ export const navigation = [
             { title: 'Introduction', href: '/api' },
             { title: 'Authentication', href: '/auth' },
             { title: 'Profiles', href: '/profiles' },
-            { title: 'Notification', href: '/notify' },
-            { title: 'Webhook', href: '/webhook' },
+            { title: 'Notify', href: '/notify' },
         ],
     },
 ]
