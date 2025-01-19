@@ -197,21 +197,19 @@ export const navigation = [
         links: [
             { title: 'Introduction', href: '/' },
             { title: 'Quickstart', href: '/quickstart' },
-            { title: 'Libraries', href: '/libs' },
-            // { title: 'Authentication', href: '/auth' },
-            // { title: 'Pagination', href: '/pagination' },
+            { title: 'Astro Integration', href: '/astro' },
+            { title: 'Next.js Integration', href: '/next' },
             { title: 'Monetize', href: '/monetize' },
-            // { title: 'Webhooks', href: '/webhooks' },
         ],
     },
     {
         title: 'API v1',
         links: [
-            { title: 'Profiles', href: '/profiles' },
-            // { title: 'Conversations', href: '/conversations' },
-            { title: 'Notifications', href: '/notifs' },
-            // { title: 'Groups', href: '/groups' },
-            // { title: 'Attachments', href: '/attachments' },
+            { title: 'Introduction', href: '/api' },
+            { title: 'Authentication', href: '/auth' },
+            { title: 'Profile', href: '/profile' },
+            { title: 'Notification', href: '/notify' },
+            { title: 'Webhook', href: '/webhook' },
         ],
     },
 ]
