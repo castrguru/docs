@@ -209,6 +209,7 @@ export const navigation = [
         links: [
             { title: 'Introduction', href: '/frameworks' },
             { title: 'Astro', href: '/astro' },
+            { title: 'Godot', href: '/godot' },
             { title: 'Next.js', href: '/next' },
             { title: 'Nuxt', href: '/nuxt' },
             { title: 'React', href: '/react' },
