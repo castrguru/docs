@@ -1,80 +1,124 @@
-import { Libraries } from '@/components/Libraries'
-
 export const metadata = {
-  title: 'Castr GÜRŲ SDKs',
-  description:
-    'Castr GÜRŲ offers fine-tuned JavaScript, Ruby, PHP, Python, and Go libraries to make your life easier and give you the best experience when consuming the API.',
+    title: 'Astro Integration Guide',
+    description:
+        'This guide will get you all set up and ready to use the Castr GÜRŲ SDK. We’ll cover how to get started an SDK client and how to make your first Cloud request.',
 }
 
-export const sections = [
-  { title: 'Official libraries', id: 'official-libraries' },
-]
+# Astro Integration Guide
+
+This guide will get you all set up and ready to use the Castr GÜRŲ SDK.
+We'll cover how to get started using one of our SDK clients and how to make your first API request.
+We'll also look at where to go next to find all the information you need to take full advantage of our powerful REST API. {{ className: 'lead' }}
+
+<Note>
+
+There is NO signup required to start making requests to the Castr GÜRŲ Cloud
+— however, we recommend you register a Frame ID from your dashboard to access full features.
+You'll find it under [Settings &raquo; API](#).
+
+</Note>
 
 
-# Astro Library
+## Choose Your Client
 
-The recommended way to interact with the Castr GÜRŲ API is by using one of our official SDKs. Today, Castr GÜRŲ offers fine-tuned JavaScript, Ruby, PHP, Python, and Go libraries to make your life easier and give you the best experience when consuming the API. {{ className: 'lead' }}
+Before making your first API request, you need to pick which API client you will use.
+In addition to good ol' cURL HTTP requests, Castr GÜRŲ offers clients for JavaScript, Python, and Rust.
+In the following example, you can see how to install each client.
 
-<Libraries />
+<CodeGroup>
+
+```bash {{ title: 'cURL' }}
+# cURL is most likely already installed on your machine
+curl --version
+```
+
+```js {{ language: 'js', title: 'JavaScript / TypeScript' }}
+// Install the Castr GÜRŲ JavaScript / TypeScript SDK
+npm install castrguru --save
+```
+
+```python {{ language: 'python' }}
+# Install the Castr GÜRŲ Python SDK
+pip install castrguru
+```
+
+```rust {{ title: 'Rust' }}
+// Install the Castr GÜRŲ Rust SDK
+cargo install castrguru
+```
+
+</CodeGroup>
+
+<div className="not-prose">
+    <Button href="/sdks" variant="text" arrow="right">
+        <>Check out our list of first-party SDKs</>
+    </Button>
+</div>
 
 
-## Astro Collections
+## Making Your 1st API Request
 
-Utilize Astro Content Loaders for managing information about your Farcaster frames.
+After picking your preferred client, you are ready to make your first call to the Castr GÜRŲ Cloud.
+Below, you can see how to send a GET request to the Profile endpoint to get a list of all your users.
+In the cURL example, results are limited to ten users, the default page length for each client.
 
-```ts {{ title: 'Setup for ALL available Content Loaders' }}
-// src/content.config.ts
-import { defineCollection } from 'astro:content'
-import {
-  eventsLoader,
-  messagesLoader,
-  profilesLoader,
-  sessionsLoader,
-} from '@castrguru/astro'
+<CodeGroup tag="GET" label="/v1/profiles">
 
-// Setup events
-const events = defineCollection({
-  loader: eventsLoader({ since: 0 }), // default = new events
-  schema: /* TODO */,
-})
+```bash {{ title: 'cURL' }}
+curl -G https://castr.guru/v1/profiles \
+  -H "Authorization: Bearer {token}" \
+  -d limit=10
+```
 
-// Setup messages
-const messages = defineCollection({
-  loader: messagesLoader({ fid: '<enter-your-farcaster-id>', since: 0 }), // default = new messages
-  schema: /* TODO */,
-})
+```js {{ language: 'js', title: 'JavaScript / TypeScript' }}
+import { Frame } from 'castrguru'
 
-// Setup profiles
-const profiles = defineCollection({
-  loader: profilesLoader(),
-  schema: /* TODO */,
-})
+const frame = await Frame(token).init()
 
-// Setup sessions
-const sessions = defineCollection({
-  loader: sessionsLoader({ status: 'active' }),
-  schema: /* TODO */,
-})
+await frame.profiles.list()
+```
 
-// Export all collections
-export const collections = {
-  events,
-  messages,
-  profiles,
-  sessions,
+```python
+from protocol_api import ApiClient
+
+client = ApiClient(token)
+
+client.profiles.list()
+```
+
+```rust {{ title: 'Rust' }}
+$client = new \Protocol\ApiClient($token);
+
+$client->profiles->list();
+```
+
+</CodeGroup>
+
+## GraphQL
+
+As an alternative to the traditional REST services, we highly recommend our efficient GraphQL server for your data needs.
+
+<CodeGroup tag="WEBSOCKET" label="/graphql">
+
+```json
+{
+  "hi": "there!"
 }
 ```
 
-Please don't commit your Castr GÜRŲ password to GitHub!
+</CodeGroup>
 
+<div className="not-prose">
+    <Button href="/conversations" variant="text" arrow="right">
+        <>Read the docs for the Conversations endpoint</>
+    </Button>
+</div>
 
-## React Hooks
-```ts {{ title: 'Setup for ALL available React Hooks' }}
-// TODO
-```
+## What's next?
 
+Great, you're now set up with an API client and have made your first request to the Cloud.
+Here are a few links that might be handy as you venture further into the Castr GÜRŲ SDK:
 
-## Vue.js Plug-ins
-```ts {{ title: 'Setup for ALL available Vue.js plug-ins' }}
-// TODO
-```
+- [Grab your API key from the Castr GÜRŲ dashboard](#)
+- [Check out the Profiles endpoint](/profiles)
+- [Learn about the different monetization in Castr GÜRŲ](/monetize)
