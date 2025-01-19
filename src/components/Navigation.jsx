@@ -208,12 +208,12 @@ export const navigation = [
         links: [
             { title: 'Introduction', href: '/frameworks' },
             { title: 'Astro', href: '/astro' },
-            { title: 'Gatsby', href: '/frameworks' },
+            { title: 'Gatsby', href: '/gatsby' },
             { title: 'Next.js', href: '/next' },
-            { title: 'Nuxt.js', href: '/frameworks' },
-            { title: 'React', href: '/frameworks' },
-            { title: 'React Native', href: '/frameworks' },
-            { title: 'Vue.js', href: '/frameworks' },
+            { title: 'Nuxt.js', href: '/nuxt' },
+            { title: 'React', href: '/react' },
+            { title: 'React Native', href: '/react-native' },
+            { title: 'Vue.js', href: '/vue' },
         ],
     },
     {

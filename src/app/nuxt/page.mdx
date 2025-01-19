@@ -1,0 +1,124 @@
+export const metadata = {
+    title: 'Nuxt.js Integration Guide',
+    description:
+        'This guide will get you all set up and ready to use the Castr GÜRŲ SDK. We’ll cover how to get started an SDK client and how to make your first Cloud request.',
+}
+
+# Nuxt.js Integration Guide
+
+This guide will get you all set up and ready to use the Castr GÜRŲ SDK.
+We'll cover how to get started using one of our SDK clients and how to make your first API request.
+We'll also look at where to go next to find all the information you need to take full advantage of our powerful REST API. {{ className: 'lead' }}
+
+<Note>
+
+There is NO signup required to start making requests to the Castr GÜRŲ Cloud
+— however, we recommend you register a Frame ID from your dashboard to access full features.
+You'll find it under [Settings &raquo; API](#).
+
+</Note>
+
+
+## Choose Your Client
+
+Before making your first API request, you need to pick which API client you will use.
+In addition to good ol' cURL HTTP requests, Castr GÜRŲ offers clients for JavaScript, Python, and Rust.
+In the following example, you can see how to install each client.
+
+<CodeGroup>
+
+```bash {{ title: 'cURL' }}
+# cURL is most likely already installed on your machine
+curl --version
+```
+
+```js {{ language: 'js', title: 'JavaScript / TypeScript' }}
+// Install the Castr GÜRŲ JavaScript / TypeScript SDK
+npm install castrguru --save
+```
+
+```python {{ language: 'python' }}
+# Install the Castr GÜRŲ Python SDK
+pip install castrguru
+```
+
+```rust {{ title: 'Rust' }}
+// Install the Castr GÜRŲ Rust SDK
+cargo install castrguru
+```
+
+</CodeGroup>
+
+<div className="not-prose">
+    <Button href="/sdks" variant="text" arrow="right">
+        <>Check out our list of first-party SDKs</>
+    </Button>
+</div>
+
+
+## Making Your 1st API Request
+
+After picking your preferred client, you are ready to make your first call to the Castr GÜRŲ Cloud.
+Below, you can see how to send a GET request to the Profile endpoint to get a list of all your users.
+In the cURL example, results are limited to ten users, the default page length for each client.
+
+<CodeGroup tag="GET" label="/v1/profiles">
+
+```bash {{ title: 'cURL' }}
+curl -G https://castr.guru/v1/profiles \
+  -H "Authorization: Bearer {token}" \
+  -d limit=10
+```
+
+```js {{ language: 'js', title: 'JavaScript / TypeScript' }}
+import { Frame } from 'castrguru'
+
+const frame = await Frame(token).init()
+
+await frame.profiles.list()
+```
+
+```python
+from protocol_api import ApiClient
+
+client = ApiClient(token)
+
+client.profiles.list()
+```
+
+```rust {{ title: 'Rust' }}
+$client = new \Protocol\ApiClient($token);
+
+$client->profiles->list();
+```
+
+</CodeGroup>
+
+## GraphQL
+
+As an alternative to the traditional REST services, we highly recommend our efficient GraphQL server for your data needs.
+
+<CodeGroup tag="WEBSOCKET" label="/graphql">
+
+```json
+{
+  "hi": "there!"
+}
+```
+
+</CodeGroup>
+
+<div className="not-prose">
+    <Button href="/conversations" variant="text" arrow="right">
+        <>Read the docs for the Conversations endpoint</>
+    </Button>
+</div>
+
+## What's next?
+
+Great, you're now set up with an API client and have made your first request to the Cloud.
+Here are a few links that might be handy as you venture further into the Castr GÜRŲ SDK:
+
+- [Grab your API key from the Castr GÜRŲ dashboard](#)
+- [Check out the Profiles endpoint](/profiles)
+- [Learn about the different monetization in Castr GÜRŲ](/monetize)
